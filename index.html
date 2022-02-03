@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uma simples consulta ao Banco de Dados</title>
+    <style type="text/css">
+        body {
+            background-color: #202020
+        }
+
+        h2 {
+            font-family: dosis, sans-serif;
+            color: #921313
+        }
+
+        input {
+            background-color: #E6E6FA;
+            color: #000000;
+            font-weight: bold
+        }
+
+        p {
+            color: #FFFFFF;
+        }
+
+        option {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Consulta no banco de Dados MySql.</h2>
+    <form method="post" action="hardware.php">
+        <div>
+            <p>Selecionar um campo no display:
+                <select name="selecionar">
+                    <option selected="selected">ID</option>
+                    <option>Nome</option>
+                    <option>Categoria</option>
+                    <option>Valor</option>
+                </select>
+            </p>
+            <input type="submit" value="Enviar consulta" />
+        </div>
+    </form>
+    <h2>Consulta no banco de Dados MySql, consulta Categoria.</h2>
+    <form method="post" action="hardwarepesquisa.php">
+        <div>
+            <p> Digitar a categoria a ser localizada:
+                <input type="text" name="categoria" />
+                <input type="submit" value="Enviar consulta" />
+        </div>
+    </form>
+    <h2>Insere dado no banco</h2>
+    <form method="post" action="inserir.php">
+        <div>
+            <p> Adicionar novo item:
+                <input type="text" name="nome" placeholder="Nome" required />
+                <input type="text" name="categoria" placeholder="Categoria" required />
+                <input type="number" name="valor" placeholder="Preço" required />
+                <input type="submit" value="Inserir" />
+        </div>
+    </form>
+</body>
+
+</html>
